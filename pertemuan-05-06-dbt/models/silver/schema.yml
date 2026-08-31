@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: olist
+    description: "Data mentah Olist yang telah dimuat ke database ClickHouse."
+    schema: "{{ env_var('DBT_SCHEMA') }}"
+
+    tables:
+      - name: dim_customer
+        identifier: dim_customers
+        description: "Data pelanggan Olist yang berisi informasi identitas dan lokasi pelanggan."
+
+      - name: dim_product
+        identifier: dim_products
+        description: "Data produk Olist yang berisi informasi kategori dan dimensi produk."
+
+      - name: dim_product_category
+        identifier: dim_product_category
+        description: "Data translasi nama kategori produk dari bahasa Portugis ke bahasa Inggris."
+
+      - name: dim_seller
+        identifier: dim_sellers
+        description: "Data penjual Olist yang berisi informasi identitas dan lokasi penjual."
+
+      - name: fact_order
+        identifier: fact_orders
+        description: "Data utama pesanan Olist yang berisi informasi transaksi dan status pesanan."
+
+      - name: fact_order_item
+        identifier: fact_order_items
+        description: "Data detail item pada setiap pesanan, termasuk harga dan biaya pengiriman."
+
+      - name: fact_order_payment
+        identifier: fact_payments
+        description: "Data metode dan informasi pembayaran untuk setiap pesanan."
+
+      - name: fact_order_review
+        identifier: fact_reviews
+        description: "Data ulasan pelanggan terhadap pesanan yang telah diterima."
+
+models:
+  - name: silver_dim_customers
+    description: "Silver dimension customer yang membersihkan dan menstandarisasi data pelanggan."
+
+  - name: silver_fact_orders
+    description: "Silver fact orders yang membersihkan data pesanan dan menambahkan informasi status pesanan."
+
+  - name: silver_fact_order_items
+    description: "Silver fact order items yang membersihkan detail item pesanan serta memastikan nilai harga dan freight valid."
+
+  - name: silver_dim_products
+    description: "Silver dimension products yang membersihkan data produk dan menggabungkan kategori produk dengan terjemahan bahasa Inggris."
+
+  - name: silver_dim_sellers
+    description: "Silver dimension sellers yang membersihkan dan menstandarisasi data penjual."
+
+  - name: silver_fact_payments
+    description: "Silver fact payments yang membersihkan dan menstandarisasi data pembayaran pesanan."
+
+  - name: silver_fact_reviews
+    description: "Silver fact reviews yang membersihkan dan menstandarisasi data ulasan pelanggan."

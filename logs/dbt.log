@@ -1,0 +1,15 @@
+[0m23:51:18.580155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FE3118EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FE529FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FE529FB10>]}
+
+
+============================== 23:51:18.593201 | d70e9f72-e86c-4ea6-b825-66fc792b76aa ==============================
+[0m23:51:18.593201 [info ] [MainThread]: Running with dbt=1.11.14
+[0m23:51:18.594462 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Naufal\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt clean', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:51:18.596194 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Naufal\Documents\Bootcamp DA Nusacodes - Exercise\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:51:18.598559 [debug] [MainThread]: Command `dbt clean` failed at 23:51:18.598338 after 0.43 seconds
+[0m23:51:18.599215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FE513FCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FE512E7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FE515F790>]}
+[0m23:51:18.599877 [debug] [MainThread]: Flushing usage events
+[0m23:51:26.583798 [debug] [MainThread]: An error was encountered while trying to flush usage events

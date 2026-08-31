@@ -1,0 +1,20 @@
+# ============================================================================
+# Marts Layer — Model-Level Tests (Data Quality)
+# ============================================================================
+# Tes di layer ini memvalidasi bahwa data siap-pakai (dim & fact) memiliki
+# kualitas yang baik sebelum digunakan oleh BI tools atau analis.
+
+version: 2
+
+models:
+  - name: gold_dim_customers
+    description: "Gold dimension customer yang menyediakan data pelanggan siap digunakan untuk analisis."
+
+  - name: gold_dim_products
+    description: "Gold dimension product yang menyediakan informasi produk dan kategori untuk kebutuhan analitik."
+
+  - name: gold_dim_sellers
+    description: "Gold dimension seller yang menyediakan informasi penjual untuk kebutuhan analitik."
+
+  - name: gold_fct_orders
+    description: "Gold fact orders yang menyediakan data transaksi pesanan untuk analisis penjualan dan performa order."

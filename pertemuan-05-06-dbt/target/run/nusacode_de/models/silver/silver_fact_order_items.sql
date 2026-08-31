@@ -1,0 +1,46 @@
+
+  
+    
+    
+    
+        
+
+
+        
+  
+
+  insert into `silver`.`silver_fact_order_items__dbt_backup`
+        ("order_id", "order_item_id", "product_id", "seller_id", "shipping_limit_date", "price", "freight_value")
+
+-- ============================================================================
+-- Silver Model: silver_fact_order_items
+-- Deskripsi    : Membersihkan data item pesanan, memastikan harga dan
+--                freight bernilai positif.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `olist`.`fact_order_items`
+),
+
+cleaned AS (
+    SELECT
+        order_id,
+        order_item_id,
+        product_id,
+        seller_id,
+        shipping_limit_date,
+        -- Harga: null -> 0, negatif -> 0
+        CASE
+            WHEN price IS NULL OR price < 0 THEN 0
+            ELSE price
+        END AS price,
+        -- Freight: null -> 0, negatif -> 0
+        CASE
+            WHEN freight_value IS NULL OR freight_value < 0 THEN 0
+            ELSE freight_value
+        END AS freight_value
+    FROM source
+)
+
+SELECT * FROM cleaned
+  

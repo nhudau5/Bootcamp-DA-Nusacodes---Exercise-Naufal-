@@ -1,0 +1,36 @@
+# ============================================================================
+# NusaCode DE Beginner — dbt Project Configuration (ClickHouse)
+# ============================================================================
+# Ditujukan untuk pembelajaran sesi 5-6.
+# Menggunakan profile "nusacode_de" (ClickHouse via dbt-clickhouse adapter).
+
+name: 'nusacode_de'
+version: '1.0.0'
+config-version: 2
+profile: nusacode_de
+
+# Jalur direktori dalam proyek dbt
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"      # Direktori hasil kompilasi (di-gitignore)
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# ============================================================================
+# MODEL CONFIGURATION
+# ============================================================================
+# Config default sudah di-set via {{ config() }} di setiap file SQL.
+# Konfigurasi di bawah hanya untuk grouping schema per folder.
+models:
+  nusacode_de:
+    silver:
+      +schema: silver
+
+    gold:
+      +schema: gold

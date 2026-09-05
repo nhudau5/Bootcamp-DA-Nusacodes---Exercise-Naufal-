@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: flight
+    database: flight
+    schema: flight
+
+    tables:
+      - name: raw_flights

@@ -1,0 +1,2 @@
+{"timestamp":"2026-09-02T01:35:16.501382Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-02T01:35:16.525883Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/flight_elt.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}

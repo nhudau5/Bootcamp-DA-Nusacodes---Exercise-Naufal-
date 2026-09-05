@@ -1,0 +1,20 @@
+{"timestamp":"2026-09-04T09:06:45.258343Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-04T09:06:45.264418Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/flight_elt.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-04T09:07:05.369027Z","level":"info","event":"\u001b[0m09:06:57  Running with dbt=1.12.3","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.371236Z","level":"info","event":"\u001b[0m09:06:58  Registered adapter: clickhouse=1.9.3","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.372928Z","level":"info","event":"\u001b[0m09:07:00  Found 2 models, 5 data tests, 1 source, 521 macros","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.374482Z","level":"info","event":"\u001b[0m09:07:00","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.376201Z","level":"info","event":"\u001b[0m09:07:00  Concurrency: 4 threads (target='airflow')","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.377936Z","level":"info","event":"\u001b[0m09:07:00","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.379317Z","level":"info","event":"\u001b[0m09:07:02  1 of 2 START sql view model `flight`.`silver_flights` .......................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.380889Z","level":"info","event":"\u001b[0m09:07:02  1 of 2 OK created sql view model `flight`.`silver_flights` ..................... [\u001b[32mOK\u001b[0m in 0.38s]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.382437Z","level":"info","event":"\u001b[0m09:07:02  2 of 2 START sql view model `flight`.`gold_flight_summary` ..................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.384184Z","level":"info","event":"\u001b[0m09:07:03  2 of 2 OK created sql view model `flight`.`gold_flight_summary` ................ [\u001b[32mOK\u001b[0m in 0.32s]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.386061Z","level":"info","event":"\u001b[0m09:07:03","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.387952Z","level":"info","event":"\u001b[0m09:07:03  Finished running 2 view models in 0 hours 0 minutes and 2.35 seconds (2.35s).","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.389647Z","level":"info","event":"\u001b[0m09:07:03","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.391548Z","level":"info","event":"\u001b[0m09:07:03  \u001b[32mCompleted successfully\u001b[0m","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.393427Z","level":"info","event":"\u001b[0m09:07:03","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.395142Z","level":"info","event":"\u001b[0m09:07:03  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.396724Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-09-04T09:07:05.372034Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}

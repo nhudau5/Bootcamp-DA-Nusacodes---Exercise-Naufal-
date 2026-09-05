@@ -1,0 +1,40 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:26.7
+    container_name: flight-clickhouse
+    restart: unless-stopped
+
+    ports:
+      - "8124:8123"
+      - "9001:9000"
+
+    environment:
+      CLICKHOUSE_DB: flight
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: admin123
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: flight-airflow
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__EXECUTOR: "SequentialExecutor"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./flight_dbt:/opt/airflow/flight_dbt
+      - C:/Users/Naufal/.dbt:/home/airflow/.dbt
+    command: standalone
+
+volumes:
+  clickhouse_data:

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: silver_flights
+    description: "Data penerbangan yang telah dibersihkan dari raw_flights."
+
+    columns:
+      - name: event_time
+        description: "Waktu penerbangan."
+        tests:
+          - not_null
+
+      - name: icao24
+        description: "Identitas unik transponder pesawat."
+        tests:
+          - not_null
+
+      - name: origin_country
+        description: "Negara asal pesawat."
+        tests:
+          - not_null

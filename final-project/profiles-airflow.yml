@@ -1,0 +1,14 @@
+flight_dbt:
+  target: dev
+
+  outputs:
+    dev:
+      type: clickhouse
+      schema: flight
+      host: clickhouse
+      port: 8123
+      user: default
+      password: admin123
+      database: flight
+      secure: false
+      threads: 4

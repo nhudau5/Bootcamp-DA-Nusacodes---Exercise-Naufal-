@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: gold_flight_summary
+    description: "Ringkasan penerbangan berdasarkan negara asal."
+
+    columns:
+      - name: origin_country
+        description: "Negara asal pesawat."
+        tests:
+          - not_null
+
+      - name: total_flights
+        description: "Jumlah data penerbangan untuk setiap negara."
+        tests:
+          - not_null

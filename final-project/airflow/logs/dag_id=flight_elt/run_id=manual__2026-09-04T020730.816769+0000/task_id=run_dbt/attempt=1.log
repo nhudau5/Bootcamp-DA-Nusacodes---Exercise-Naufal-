@@ -1,0 +1,25 @@
+{"timestamp":"2026-09-04T02:07:48.211566Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-04T02:07:48.214935Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/flight_elt.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-04T02:08:08.958587Z","level":"info","event":"\u001b[0m02:07:57  Running with dbt=1.12.3","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.960889Z","level":"info","event":"\u001b[0m02:07:58  Registered adapter: clickhouse=1.9.3","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.962912Z","level":"info","event":"\u001b[0m02:07:58  Unable to do partial parsing because of a version mismatch","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.964700Z","level":"info","event":"\u001b[0m02:08:04  Found 4 models, 4 data tests, 1 source, 521 macros","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.966433Z","level":"info","event":"\u001b[0m02:08:04","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.968140Z","level":"info","event":"\u001b[0m02:08:04  Concurrency: 4 threads (target='airflow')","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.969860Z","level":"info","event":"\u001b[0m02:08:04","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.971127Z","level":"info","event":"\u001b[0m02:08:05  1 of 4 START sql table model `flight`.`my_first_dbt_model` ..................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.972385Z","level":"info","event":"\u001b[0m02:08:05  2 of 4 START sql view model `flight`.`silver_flights` .......................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.973853Z","level":"info","event":"\u001b[0m02:08:06  2 of 4 OK created sql view model `flight`.`silver_flights` ..................... [\u001b[32mOK\u001b[0m in 0.58s]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.975207Z","level":"info","event":"\u001b[0m02:08:06  3 of 4 START sql view model `flight`.`gold_flight_summary` ..................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.976512Z","level":"info","event":"\u001b[0m02:08:06  1 of 4 OK created sql table model `flight`.`my_first_dbt_model` ................ [\u001b[32mOK\u001b[0m in 0.63s]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.977937Z","level":"info","event":"\u001b[0m02:08:06  4 of 4 START sql view model `flight`.`my_second_dbt_model` ..................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.979292Z","level":"info","event":"\u001b[0m02:08:06  4 of 4 OK created sql view model `flight`.`my_second_dbt_model` ................ [\u001b[32mOK\u001b[0m in 0.13s]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.980516Z","level":"info","event":"\u001b[0m02:08:06  3 of 4 OK created sql view model `flight`.`gold_flight_summary` ................ [\u001b[32mOK\u001b[0m in 0.31s]","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.981961Z","level":"info","event":"\u001b[0m02:08:06","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.983152Z","level":"info","event":"\u001b[0m02:08:06  Finished running 1 table model, 3 view models in 0 hours 0 minutes and 1.76 seconds (1.76s).","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.984546Z","level":"info","event":"\u001b[0m02:08:06","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.985863Z","level":"info","event":"\u001b[0m02:08:06  \u001b[32mCompleted successfully\u001b[0m","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.987377Z","level":"info","event":"\u001b[0m02:08:06","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.988953Z","level":"info","event":"\u001b[0m02:08:06  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.990487Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-09-04T02:08:08.959650Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
